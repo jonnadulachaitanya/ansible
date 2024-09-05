@@ -1,8 +1,8 @@
 - name: nginx installation
   hosts: web
+  become: yes # it will take root(sudo) access
   tasks:
   - name: Installing nginx
     ansible.builtin.package:
       name: nginx
       state: installed
-      
