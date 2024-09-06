@@ -5,7 +5,7 @@
   - name: check if expense user exist or not.
     ansible.builtin.command: id expense
     register: USER
-   # ignore_errors: true
+    ignore_errors: true
 
   - name: print the user info.
     ansible.builtin.debug:
