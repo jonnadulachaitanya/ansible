@@ -1,5 +1,5 @@
 - name: varibles from files
-  host: web
+  hosts: web
   vars:
   - vars.yaml
   tasks:
