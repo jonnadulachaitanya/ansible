@@ -1,5 +1,6 @@
 - name: check number is lessthan 10 or not
   hosts: local
+  connection: false
   vars:
     number: 130
 
