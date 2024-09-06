@@ -6,8 +6,6 @@
   - name: COURSE
     prompt: please enter the course name
     private: false
-  var_files:
-  - vars.yaml
   tasks:
   - name: print the variables
     vars:
