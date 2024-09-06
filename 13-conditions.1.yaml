@@ -8,7 +8,9 @@
   - name: print the number if it is lessthan 10
     ansible.builtin.debug:
       msg: "the given number {{number}} is lessthan 10"
+    when: number < 10
 
   - name: print the number if it is greterthan or equalto  10
     ansible.builtin.debug:
       msg: "the given number {{number}} is greterthan or equalto  10"
+    when: number >= 10
