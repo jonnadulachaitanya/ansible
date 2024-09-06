@@ -15,8 +15,9 @@
     ansible.builtin.debug:
       msg: "i am learning {{COURSE}}"
 
-## first preference is command line or args.
-# second preference is task level.
-#the third preference is from vars file.
-# the fourth preference is from prompt.
-# the fifth preference is from
+# 1. first preference is command line or args.
+# 2. second preference is task level.
+# 3. the third preference is from vars file.
+# 4. the fourth preference is from prompt.
+# 5. the fifth preference is from Play level.
+# 6. the Sixth preference is from inventory
