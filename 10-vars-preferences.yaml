@@ -1,0 +1,15 @@
+- name: print the variables
+  hosts: web
+  vars:
+    COURSE: "Devops with aws from PLAY"
+  var_prompt:
+  - name: COURSE
+    prompt: please enter the course name
+  var_files:
+  - vars.yaml
+  tasks:
+  - name: print the variables
+    vars:
+      COURSE: "DevOps with aws from task level"
+    ansible.builtin.debug:
+      msg: "i am learning {{COURSE}}"
