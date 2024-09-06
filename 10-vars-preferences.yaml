@@ -1,7 +1,7 @@
 - name: print the variables
   hosts: web
-  vars:
-    COURSE: "Devops with aws from PLAY"
+  # vars:
+  #   COURSE: "Devops with aws from PLAY"
   # vars_files:
   # - vars.yaml
   # vars_prompt:
@@ -18,4 +18,5 @@
 ## first preference is command line or args.
 # second preference is task level.
 #the third preference is from vars file.
-# the fourth preference is from 
+# the fourth preference is from prompt.
+# the fifth preference is from
