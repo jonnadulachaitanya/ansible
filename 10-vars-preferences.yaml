@@ -2,13 +2,16 @@
   hosts: web
   vars:
     COURSE: "Devops with aws from PLAY"
-  # vars_prompt:
-  # - name: COURSE
-  #   prompt: please enter the course name
-  #   private: false
+  vars_prompt:
+  - name: COURSE
+    prompt: please enter the course name
+    private: false
   tasks:
   - name: print the variables
     vars:
       COURSE: "DevOps with aws from task level"
     ansible.builtin.debug:
       msg: "i am learning {{COURSE}}"
+
+## first preference is command line or args.
+# second preference is 
