@@ -9,10 +9,10 @@
   tasks:
   - name: print this if the number less than 10
     ansible.builtin.debug:
-      msg: "the given {{number}} is less than 10"
-    when: number | int < 10 
+      msg: "the given number {{number}} is less than 10"
+    when: number | int < 10  # number is taking as string so we mention it need to be as int, that is why we put '|' what ever we gave number it will be move as int.
 
   - name: print this if the number greater than or equal to 10.
     ansible.builtin.debug:
-      msg: "The given {{number}} is greater than or equal to 10"
-    when: number | int >= 10
+      msg: "The given number {{number}} is greater than or equal to 10"
+    when: number | int >= 10  ## number is taking as string so we mention it need to be as int, that is why we put '|' what ever we gave number it will be move as int.
