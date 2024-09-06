@@ -2,8 +2,8 @@
   hosts: web
   vars:
     COURSE: "Devops with aws from PLAY"
-  vars_files:
-  - vars.yaml
+  # vars_files:
+  # - vars.yaml
   vars_prompt:
   - name: COURSE
     prompt: please enter the course name
@@ -18,4 +18,4 @@
       msg: "i am learning {{COURSE}}"
 
 ## first preference is command line or args.
-# second preference is task level
+# second preference is vars.yaml file
