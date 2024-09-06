@@ -4,10 +4,10 @@
     COURSE: "Devops with aws from PLAY"
   # vars_files:
   # - vars.yaml
-  vars_prompt:
-  - name: COURSE
-    prompt: please enter the course name
-    private: false
+  # vars_prompt:
+  # - name: COURSE
+  #   prompt: please enter the course name
+  #   private: false
   tasks:
   - name: print the variables
     # vars:
