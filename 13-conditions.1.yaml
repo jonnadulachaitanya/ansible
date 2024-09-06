@@ -12,5 +12,5 @@
 
   - name: print the number if it is greterthan or equalto  10
     ansible.builtin.debug:
-      msg: "the given number {{number}} is greterthan or equalto  10"
+      msg: "the given number {{number}} is greterthan 10"
     when: number >= 10
