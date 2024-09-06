@@ -1,16 +1,17 @@
 - name: devops course information
   hosts: local
+  connection: local ## you are in inside the ansible so it will search for username and pwd if you mention this
   vars:
-    course: "devops with aws"
-    duration: "120hrs"
-    topics:
+    course: "devops with aws" #string
+    duration: "120hrs" #number
+    topics: #Lists
     - ansible
     - terraform
     - git
     - maven
-    live: true
-    tools:
-      ci: jenkin
+    live: true #boolean
+    tools: #map/dictionary
+      ci: jenkin # string
       cm: ansible
       cloud:
       - aws
