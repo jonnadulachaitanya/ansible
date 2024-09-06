@@ -2,7 +2,7 @@
   hosts: web
   vars:
     COURSE: "Devops with aws from PLAY"
-  var_prompt:
+  vars_prompt:
   - name: COURSE
     prompt: please enter the course name
   var_files:
