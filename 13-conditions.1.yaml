@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    number: 130
+    number: 8
 
   tasks:
   - name: print the number if it is lessthan 10
