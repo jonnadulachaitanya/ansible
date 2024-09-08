@@ -28,5 +28,5 @@
     vars: 
       myip: 198.165.3.4
     ansible.builtin.debug:
-      msg: "{{myip | ansible.utils.ipadr}}"
+      msg: "{{myip | ansible.utils.ipaddr}}"
       
