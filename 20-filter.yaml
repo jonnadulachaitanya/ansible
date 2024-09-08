@@ -24,9 +24,9 @@
     ansible.builtin.debug:
       msg: "{{numbers | unique}}"
 
-  - name: check if proper address or not
+  - name: print the min and max number
     vars: 
-      myip: 198.165.3.4
+      numbers: [1,2,4,3,5,5,6,3,4]
     ansible.builtin.debug:
-      msg: "{{myip | ansible.utils.ipaddr}}"
+      msg: " min: {{numbers | min}}, max: {{numbers | max}}"
       
