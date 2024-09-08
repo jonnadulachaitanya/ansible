@@ -6,9 +6,8 @@
     ansible.builtin.debug:
       msg: "{{ COURSE | default('ansible')}}"
 
-- name: convert to upper case
-  vars:
-    greetings: "Hello Ramesh"
-  ansible.builtin.debug:
-    msg: "{{ greetings | upper }}"
-    
+  - name: convert to upper case
+    vars:
+      greetings: "Hello Ramesh"
+    ansible.builtin.debug:
+      msg: "{{ greetings | upper }}"
