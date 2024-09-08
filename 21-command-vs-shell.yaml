@@ -3,7 +3,12 @@
   connection: local
   tasks:
   # - name: execute the command
-  #   ansible.builtin.command: ls -ltr > /tmp/output.txt   #"ls: cannot access '>': No such file or directory", "ls: cannot access '/tmp/output.txt
+  #   ansible.builtin.command: ls -ltr > /tmp/output.txt   #"ls: cannot access '>': No such file or directory", "ls: cannot access '/tmp/output.txt  and # command module, 
+  #just issues the command
 
   - name: execute  in shell
-    ansible.builtin.shell: ls -lrt > /tmp/output.txt
+    ansible.builtin.shell: ls -lrt > /tmp/output.txt # login to the server and execute command inside
+
+  - name: execute in shell
+    ansible.builtin.shell: ps -ef | grep ssh
+    regsiter: output
