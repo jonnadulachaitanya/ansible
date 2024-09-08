@@ -9,6 +9,6 @@
   - name: execute  in shell
     ansible.builtin.shell: ls -lrt > /tmp/output.txt # login to the server and execute command inside
 
-  - name: execute in shell
-    ansible.builtin.shell: ps -ef | grep ssh
-    regsiter: output
+  # - name: execute in shell
+  #   ansible.builtin.shell: ps -ef | grep ssh
+  #   regsiter: output
