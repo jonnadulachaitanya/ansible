@@ -15,4 +15,4 @@
 
   - name:
     ansible.builtin.debug:
-    msg: "result is {{output}}"
+    msg: "result is {{ output }}"
