@@ -2,5 +2,8 @@
   hosts: local
   connection: local
   tasks:
-  - name: execute the command
-    ansible.builtin.command: ls -ltr > /tmp/output.txt
+  # - name: execute the command
+  #   ansible.builtin.command: ls -ltr > /tmp/output.txt   #"ls: cannot access '>': No such file or directory", "ls: cannot access '/tmp/output.txt
+
+  - name: execute  in shell
+    ansible.builtin.shell: ls -lrt > /tmp/output.txt
