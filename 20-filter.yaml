@@ -4,4 +4,11 @@
   tasks:
   - name: print the default variable
     ansible.builtin.debug:
-      msg: "{{ USER | default('ansible')}}"
+      msg: "{{ COURSE | default('ansible')}}"
+
+- name: convert to upper case
+  vars:
+    greetings: "Hello Ramesh"
+  ansible.builtin.debug:
+    msg: "{{ greetings | upper }}"
+    
