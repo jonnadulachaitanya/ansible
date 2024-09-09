@@ -56,6 +56,7 @@
     - mysql
     - backened
     - frontend
+    zone: chaitanyaproject.online
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
@@ -67,6 +68,21 @@
 
     loop: "{{instances}}"
     register: ec2_instances
+
+  - name: print instance details
+    ansible.builtin.debug:
+    msg: "{{ec2_instances}}"
+
+  # - name: create route53
+  #   amazon.aws.route53:
+  #     state: present
+  #     zone: "{{zone}}"
+  #     record: 
+  #     value:
+  #     type:
+  #     ttl: 
+  #     wait:
+  #     overwrite:
 
 
 
