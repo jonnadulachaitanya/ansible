@@ -21,11 +21,11 @@
       image_id: "{{ami_id}}"
 
     loop: "{{instances}}"
-    register: ec2-instances
+    register: ec2-_nstances
 
   - name: print the ec2 instance info
     ansible.builtin.debug:
-      msg: "{{ec2-instances}}"
+      msg: "{{ec2_instances}}"
 
 
    
