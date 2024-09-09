@@ -21,5 +21,8 @@
       image_id: "{{ami_id}}"
 
     loop: "{{instances}}"
+    register: ec2-instances
+
+
    
 
