@@ -71,7 +71,7 @@
 
   - name: print instance details
     ansible.builtin.debug:
-    msg: "{{ec2_instances}}"
+      msg: "{{ec2_instances}}"
 
   # - name: create route53
   #   amazon.aws.route53:
