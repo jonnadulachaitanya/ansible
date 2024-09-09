@@ -58,7 +58,7 @@
     - frontend
   tasks:
   - name: create ec2 instance
-    amazonaws.ec2_instance:
+    amazon.aws.ec2_instance:
       name: "{{items}}"
       vpc_subnet_id: "{{subnet_id}}"
       security_group: "{{sg_id}}"
