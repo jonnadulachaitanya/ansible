@@ -54,7 +54,7 @@
 
     instances:
     - mysql
-    - backened
+    - backend
     - frontend
     zone: chaitanyaproject.online
   tasks:
