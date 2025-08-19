@@ -29,14 +29,28 @@
     ansible.builtin.debug:
       msg: "{{ ec2_instances }}"
 
-  # - name: create route53
-  #   amazon.aws.route53:
-  #     state: present
-  #     zone: "{{ zone }}"
-  #     value: 
-  #     record:
-  #     type:
-  #     ttl:
-  #     wait:
-  #     overwrite:
+  - name: create route53
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}" #chaitanyaproject.online
+      value: "{{ item.instances[0].private_ip_address}} 
+      record: "{{ item.item }}.{{ zone }}"  #backend, mysql, frontend.chaitanyaproject.online
+      type: A
+      ttl: 1
+      wait: true
+      overwrite: true
+    loop: "{{ ec2_instances.results}}" #based on output from ec2instances, we writtened this loop
+
+  - name: create route53 for public
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      value: "{{ item.instance[0].public_ip_address }}"
+      record: "{{ item.item }}.{{ zone }}" #frontend.chaitanyaproject.online
+      type: A
+      ttl: 1
+      wait: true
+      overwrite: true #it will replaces with new if any old route is there
+    loop: "{{ ec2_instances.results}}"
+    when: item.item == frontend #it will run when it is matches
 
