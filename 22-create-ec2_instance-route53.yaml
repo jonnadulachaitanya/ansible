@@ -25,6 +25,10 @@
     loop: "{{ instances }}"
     register: ec2_instances
 
+  - name: print the instance details
+    ansible.built.debug:
+      msg: "{{ ec2_instances }}"
+
   # - name: create route53
   #   amazon.aws.route53:
   #     state: present
