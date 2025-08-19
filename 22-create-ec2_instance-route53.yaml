@@ -33,7 +33,7 @@
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}" #chaitanyaproject.online
-      value: "{{ item.instances[0].private_ip_address}} 
+      value: "{{ item.instances[0].private_ip_address}}"
       record: "{{ item.item }}.{{ zone }}"  #backend, mysql, frontend.chaitanyaproject.online
       type: A
       ttl: 1
