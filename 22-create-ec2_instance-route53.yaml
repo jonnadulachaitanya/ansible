@@ -15,7 +15,7 @@
 
   tasks: 
   - name: create ec2
-    amazon.aws.instance: 
+    amazon.aws.ec2_instance: 
       name: "{{ item }}"
       vpc-subnet_id: "{{ subnet_id }}"
       instance_type: "{{ instance_type }}"
@@ -23,7 +23,6 @@
       security_group: "{{ security_group }}"
 
     loop: "{{ instances }}"
-
     register: ec2_instances
 
   # - name: create route53
