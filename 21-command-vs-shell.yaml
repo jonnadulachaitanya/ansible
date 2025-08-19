@@ -9,10 +9,11 @@
   - name: execute  in shell
     ansible.builtin.shell: ls -lrt > /tmp/output.txt # login to the server and execute command inside
 
+# For piping
   - name: execute in shell
     ansible.builtin.shell: ps -ef | grep ssh
     register: output
 
   - name: execute in shell   # this will give error will not execute
-    ansible.builtin.shell: ps -ef | grep ssh
+    ansible.builtin.shell: ps -ef | grep ssh # output will be all processes with UID,PID,CPU,PPID, and it will search with ssh word and display.
     register: output  
