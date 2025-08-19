@@ -39,7 +39,7 @@
       ttl: 1
       wait: true
       overwrite: true
-    loop: "{{ ec2_instances.results}}" #based on output from ec2instances, we writtened this loop
+    loop: "{{ ec2_instances.results }}" #based on output from ec2instances, we writtened this loop
 
   - name: create route53 for public
     amazon.aws.route53:
@@ -51,6 +51,6 @@
       ttl: 1
       wait: true
       overwrite: true #it will replaces with new if any old route is there
-    loop: "{{ ec2_instances.results}}"
+    loop: "{{ ec2_instances.results }}"
     when: item.item == "frontend" #it will run when it is matches
 
