@@ -1,3 +1,39 @@
 - name: create ec2 instance and route53
   hosts: local
   connection: local
+  vars:
+    subnet_id: "subnet-056ed6edf435f4469"
+    instance_type: "t2.micro"
+    imaged_id: "ami-09c813fb71547fc4f"
+    seurity_group: "sg-0964d745c1e62cc99"
+    zone: "chaitanyaproject.online"
+
+    instances: 
+    - mysql
+    - frontend
+    - backend
+
+  tasks: 
+  - name: create ec2
+    amazon.aws.instance: 
+      name: "{{ item }}"
+      vpc-subnet_id: "{{ subnet_id }}"
+      instance_type: "{{ instance_type }}"
+      image_id: "{{ image_id }}"
+      security_group: "{{ security_group }}"
+
+    loop: {{ instances }}
+
+    register: ec2_instances
+
+  # - name: create route53
+  #   amazon.aws.route53:
+  #     state: present
+  #     zone: "{{ zone }}"
+  #     value: 
+  #     record:
+  #     type:
+  #     ttl:
+  #     wait:
+  #     overwrite:
+
