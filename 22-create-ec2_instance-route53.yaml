@@ -4,7 +4,7 @@
   vars:
     subnet_id: "subnet-056ed6edf435f4469"
     instance_type: "t2.micro"
-    imaged_id: "ami-09c813fb71547fc4f"
+    image_id: "ami-09c813fb71547fc4f"
     seurity_group: "sg-0964d745c1e62cc99"
     zone: "chaitanyaproject.online"
 
