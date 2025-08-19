@@ -26,7 +26,7 @@
     register: ec2_instances
 
   - name: print the instance details
-    ansible.built.debug:
+    ansible.builtin.debug:
       msg: "{{ ec2_instances }}"
 
   # - name: create route53
