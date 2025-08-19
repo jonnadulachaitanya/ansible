@@ -52,5 +52,5 @@
       wait: true
       overwrite: true #it will replaces with new if any old route is there
     loop: "{{ ec2_instances.results}}"
-    when: item.item == frontend #it will run when it is matches
+    when: item.item == "frontend" #it will run when it is matches
 
