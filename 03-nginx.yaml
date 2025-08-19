@@ -5,7 +5,7 @@
   - name: Installing nginx
     ansible.builtin.package: #Package: heterogeneous module that can work for all distors
       name: nginx
-      state: installed
+      state: present
 
   - name: run the nginx
     ansible.builtin.service:
