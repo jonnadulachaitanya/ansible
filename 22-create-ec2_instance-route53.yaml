@@ -52,7 +52,7 @@
       state: present
       zone: "{{ zone }}"
       value: "{{ item.instances[0].public_ip_address }}"
-      record: "{{ item.item }}.{{ zone }}" #frontend.chaitanyaproject.online
+      record: "{{ zone }}" #fchaitanyaproject.online
       type: A
       ttl: 1
       wait: true
